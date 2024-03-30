@@ -57,7 +57,7 @@ const KEY = "25269250";
 export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
-  const tempQuery = "Interstellar";
+  // const tempQuery = "Interstellar";
   const { movies, isLoading, error } = useMovies(
     query,
     handleCloseSelectedMovie
@@ -86,7 +86,7 @@ export default function App() {
 
   useEffect(
     function () {
-      localStorage.setItem("watched", JSON.stringify(watched));
+      localStorage.setItem("watched", JSON.stringify(tempWatchedData));
     },
     [watched]
   );
