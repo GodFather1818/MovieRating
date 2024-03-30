@@ -62,11 +62,11 @@ export default function App() {
     query,
     handleCloseSelectedMovie
   );
-  // const [watched, setWatched] = useState([]);
-  const [watched, setWatched] = useState(function () {
-    const storedMovie = localStorage.getItem("watched");
-    return JSON.parse(storedMovie);
-  });
+  const [watched, setWatched] = useState([]);
+  // const [watched, setWatched] = useState(function () {
+  //   const storedMovie = localStorage.getItem("watched");
+  //   return JSON.parse(storedMovie);
+  // });
 
   function handleSelectedId(id) {
     setSelectedId((selectedId) => (id === selectedId ? null : id));
@@ -84,12 +84,12 @@ export default function App() {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
 
-  useEffect(
-    function () {
-      localStorage.setItem("watched", JSON.stringify(tempWatchedData));
-    },
-    [watched]
-  );
+  // useEffect(
+  //   function () {
+  //     localStorage.setItem("watched", JSON.stringify(tempWatchedData));
+  //   },
+  //   [watched]
+  // );
 
   return (
     <>
