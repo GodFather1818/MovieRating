@@ -36,7 +36,7 @@ export function useMovies(query, callback) {
             console.log(err.message);
           }
 
-          console.error(err.message);
+          // console.error(err.message);
         } finally {
           setIsLoading(false);
         }
