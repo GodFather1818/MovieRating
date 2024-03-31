@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
+
 import PropTypes from "prop-types";
 
 const containerStyle = {
