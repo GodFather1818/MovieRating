@@ -11,7 +11,6 @@ export function useMovies(query, callback) {
     function () {
       callback?.();
       const controller = new AbortController();
-
       async function fetchMovies() {
         try {
           setIsLoading(true);
